@@ -77,7 +77,7 @@ const LandingPage = () => {
             Invest Smart, Invest Green!
           </h1>
           <p className="text-xl mb-8 text-gray-200 font-light">
-            Track your impact. Analyze your portfolio. Go green!
+            Invest sustainably with ESG funds and secure a greener future today!
           </p>
           
           <button 

@@ -1,77 +1,94 @@
 import React from 'react';
-import { 
-  BarChart3, 
-  Leaf, 
-  LineChart,
-  Newspaper,
-  Users
+import {
+  TrendingUp,
+  Scale,
+  Leaf,
+  Heart,
+  PiggyBank,
+  Target
 } from 'lucide-react';
 
 const FeatureCard = ({ title, description, icon: Icon }) => (
-  <div className="p-6 border border-gray-700 rounded-lg bg-gray-900 shadow-sm 
-                  hover:shadow-lg transition-all duration-300 hover:scale-105 
-                  hover:border-green-500/50 group">
-    <div className="flex items-center mb-4">
-      <div className="p-2 bg-green-900/50 rounded-lg group-hover:bg-green-900/70 
-                      transition-all duration-300">
-        <Icon className="h-6 w-6 text-green-400 group-hover:text-green-300" />
+  <div className="p-8 border border-gray-700/50 rounded-xl bg-gray-900/90 shadow-lg 
+                  hover:shadow-2xl transition-all duration-500 hover:scale-102 
+                  hover:border-green-500/30 group backdrop-blur-sm
+                  relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent 
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
+    <div className="relative z-10">
+      <div className="flex items-center mb-6">
+        <div className="p-3 bg-green-900/30 rounded-xl group-hover:bg-green-900/50 
+                        transition-all duration-500 ring-1 ring-green-500/20
+                        group-hover:ring-green-500/40">
+          <Icon className="h-7 w-7 text-green-400 group-hover:text-green-300 
+                          transform group-hover:rotate-6 transition-all duration-500" />
+        </div>
       </div>
+      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-green-400 
+                     transition-colors duration-500">
+        {title}
+      </h3>
+      <p className="text-gray-400 group-hover:text-gray-200 transition-colors duration-500 
+                    leading-relaxed">
+        {description}
+      </p>
     </div>
-    <h3 className="text-lg font-semibold mb-2 text-white group-hover:text-green-400 
-                   transition-colors duration-300">
-      {title}
-    </h3>
-    <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-      {description}
-    </p>
   </div>
 );
 
 const FeaturesSection = () => {
   const features = [
     {
+      icon: TrendingUp,
+      title: "Growing Popularity of ESG Investing",
+      description: "Learn how ESG investing has become mainstream, with increasing numbers of investors prioritizing environmental, social, and governance factors in their investment decisions."
+    },
+    {
+      icon: Scale,
+      title: "ESG vs. Traditional Investing",
+      description: "Understand the key differences between ESG and traditional investing approaches, and how sustainable investing can potentially offer better risk-adjusted returns."
+    },
+    {
       icon: Leaf,
-      title: "Sustainability Score System",
-      description: "Track and measure the environmental impact of your investments with our comprehensive sustainability scoring system."
+      title: "Reducing Environmental Risks",
+      description: "Discover how ESG-focused investments help minimize exposure to environmental risks and support companies leading the transition to a sustainable economy."
     },
     {
-      icon: BarChart3,
-      title: "Portfolio Carbon Footprint Analysis",
-      description: "Monitor and analyze the carbon footprint of your investment portfolio with detailed metrics and insights."
+      icon: Heart,
+      title: "Consumer and Employee Well-being",
+      description: "Explore investments in companies that prioritize stakeholder well-being, fostering better workplace conditions and consumer satisfaction."
     },
     {
-      icon: LineChart,
-      title: "Green Mutual Fund Suggestions",
-      description: "Discover and compare eco-friendly mutual funds tailored to your investment goals and sustainability preferences."
+      icon: PiggyBank,
+      title: "Sustainable & Profitable Investing",
+      description: "See how sustainable investing can generate competitive returns while contributing to positive environmental and social impact."
     },
     {
-      icon: Newspaper,
-      title: "Live Green Investment News",
-      description: "Stay informed with real-time updates on sustainable investments, market trends, and environmental policies."
-    },
-    {
-      icon: Users,
-      title: "Community",
-      description: "Connect with like-minded investors, share insights, and learn from others committed to sustainable investing."
+      icon: Target,
+      title: "Aligning Investments with Values",
+      description: "Match your investment strategy with your personal values while building a diversified portfolio that supports sustainable business practices."
     }
   ];
 
   return (
-    <div className="w-screen bg-gray-800 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 mt-6 
-                         bg-gradient-to-r from-green-400 to-green-600 
-                         bg-clip-text text-transparent">
-            Sustainable Investment Features
+    <section className="relative w-full bg-gray-800 overflow-hidden mt-24 md:mt-32">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,#1a472a,#111827_60%)]"/>
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
+        <div className="text-center mb-16 sm:mb-20">
+          <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-white mb-4 
+                         bg-gradient-to-r from-green-400 via-green-300 to-green-500 
+                         bg-clip-text 
+                         [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
+            Why Choose ESG Investing?
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Empowering your journey towards sustainable investing
+          <p className="text-sm sm:text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto
+                        font-light">
+            Build a portfolio that delivers both financial returns and positive impact
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 
-                        sm:gap-8 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 
+                        sm:gap-10 md:gap-12 lg:gap-12">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -82,7 +99,7 @@ const FeaturesSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

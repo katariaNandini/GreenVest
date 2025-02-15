@@ -5,22 +5,28 @@ import FeaturesSection from "./Feature";
 
 const AboutUs = () => {
   return (
-    <div className="mt-5 ">
+    <div className="mt-5 mb-5">
             
 
     <section className="bg-gray-900 text-gray-200 py-16 px-6 md:px-12 lg:px-24">
       <div className="container mx-10 flex flex-col md:flex-row items-center mt-10 mb-36">
         {/* Left Side - Text Content */}
-        <div className="md:w-1/2 text-center md:text-left">
-      <h2 className="text-4xl font-bold text-green-400 mb-6">About Us 🌱💡</h2>
-          <p className="text-lg text-gray-400 mb-6">
-            At <span className="text-green-400 font-semibold">GreenVue</span>, we believe that investing should not only generate profits but also create a positive impact on the environment. Our platform empowers investors with AI-driven sustainability scores, carbon footprint analysis, and curated green investment options to make informed, eco-friendly financial decisions.
-          </p>
-          <p className="text-lg text-gray-400 mb-6">
-            We tackle the challenges of ESG transparency, greenwashing, and lack of awareness by providing real-time insights, tax benefits, and government incentives for sustainable investments.
-          </p>
-          <p className="text-lg text-green-400 font-semibold">Join us in shaping a greener, more responsible financial future! 🌍💰</p>
-        </div>
+
+  <div className="md:w-1/2 text-center md:text-left">
+  <h2 className="text-4xl font-bold text-green-400 mb-6">About Us 🌱💡</h2>
+  <p className="text-lg text-gray-400 mb-6">
+    At <span className="text-green-400 font-semibold">GreenVest</span>, we believe that investing should not only generate financial returns but also contribute to a sustainable future. Our platform encourages individuals to invest at least 1% of their income in green mutual funds and ESG 
+  </p>
+  <p className="text-lg text-gray-400 mb-6">
+    Green investing allows you to grow your wealth while promoting clean energy, ethical labor practices, and responsible governance. Unlike traditional investments, ESG funds focus on companies that are making a positive environmental and social impact.
+  </p>
+  {/* <p className="text-lg text-gray-400 mb-6">
+    To make this process seamless, GreenVest offers educational resources, an investment calculator, and a transaction simulation tool to help users experience investing risk-free. Our dashboard allows you to track your past investments, monitor fund performance, and measure your sustainability impact.
+  </p> */}
+   <p className="text-lg text-green-400 font-semibold">
+    We aim to create a movement where every small contribution leads to a big impact. By investing in ESG funds, you are not just securing your financial future but also contributing to a healthier planet. Join GreenVest today and be a part of the change! 🌍
+   </p>
+  </div>
 
         {/* Right Side - Image */}
         <div className="md:w-1/2 flex justify-center mt-8 md:mt-7 h-80">
@@ -32,11 +38,11 @@ const AboutUs = () => {
         </div>
 
       </div>
-      <div className="h-screen ">
+      <div >
       <FeaturesSection />
       </div>
     
-    </section>
+    {/* </section>
     <section className="bg-gray-900 text-gray-200 py-16 px-6 md:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-green-400 mb-6">Investing for a Greener Tomorrow</h2>
@@ -83,8 +89,8 @@ const AboutUs = () => {
         <a href="/features" className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 text-lg font-semibold rounded-lg transition">
            Explore Now 
         </a>
-      </div>
-    </section>
+      </div>  */}
+    </section> 
     </div>
   );
 };

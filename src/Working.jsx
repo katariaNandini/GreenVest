@@ -6,7 +6,7 @@ const Working = () => {
   return (
     <div className="w-full bg-gray-900 text-white">
       {/* How It Works Section */}
-      <section className="w-full py-20 bg-gray-900">
+      {/* <section className="w-full py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 
                          bg-gradient-to-r from-green-400 to-green-600 
@@ -16,7 +16,7 @@ const Working = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 text-center border border-gray-700 rounded-lg 
                            hover:border-green-500/50 transition-all duration-300 
-                           bg-gray-900/50 hover:transform hover:scale-105">
+                           bg-gray-800 hover:transform hover:scale-105">
               <div className="bg-green-500 w-14 h-14 rounded-full flex items-center 
                              justify-center mx-auto mb-4 shadow-lg shadow-green-500/20">
                 <span className="text-xl font-bold">1</span>
@@ -26,7 +26,7 @@ const Working = () => {
             </div>
             <div className="p-6 text-center border border-gray-700 rounded-lg 
                            hover:border-green-500/50 transition-all duration-300 
-                           bg-gray-900/50 hover:transform hover:scale-105">
+                           bg-gray-800 hover:transform hover:scale-105">
               <div className="bg-green-500 w-14 h-14 rounded-full flex items-center 
                              justify-center mx-auto mb-4 shadow-lg shadow-green-500/20">
                 <span className="text-xl font-bold">2</span>
@@ -36,7 +36,7 @@ const Working = () => {
             </div>
             <div className="p-6 text-center border border-gray-700 rounded-lg 
                            hover:border-green-500/50 transition-all duration-300 
-                           bg-gray-900/50 hover:transform hover:scale-105">
+                           bg-gray-800 hover:transform hover:scale-105">
               <div className="bg-green-500 w-14 h-14 rounded-full flex items-center 
                              justify-center mx-auto mb-4 shadow-lg shadow-green-500/20">
                 <span className="text-xl font-bold">3</span>
@@ -46,10 +46,51 @@ const Working = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="w-full py-20 bg-gray-900">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 
+                   bg-gradient-to-r from-green-400 to-green-600 
+                   bg-clip-text text-transparent">
+      How It Works
+    </h2>
+    <div className="grid md:grid-cols-3 gap-8">
+      <div className="p-6 text-center border border-gray-700 rounded-lg 
+                     hover:border-green-500/50 transition-all duration-300 
+                     bg-gray-800 hover:transform hover:scale-105">
+        <div className="bg-green-500 w-14 h-14 rounded-full flex items-center 
+                       justify-center mx-auto mb-4 shadow-lg shadow-green-500/20">
+          <span className="text-xl font-bold">1</span>
+        </div>
+        <h3 className="text-xl font-semibold mb-3 text-green-400">Learn About ESG Funds</h3>
+        <p className="text-gray-300">Explore the impact of ESG mutual funds and why sustainable investing matters.</p>
+      </div>
+      <div className="p-6 text-center border border-gray-700 rounded-lg 
+                     hover:border-green-500/50 transition-all duration-300 
+                     bg-gray-800 hover:transform hover:scale-105">
+        <div className="bg-green-500 w-14 h-14 rounded-full flex items-center 
+                       justify-center mx-auto mb-4 shadow-lg shadow-green-500/20">
+          <span className="text-xl font-bold">2</span>
+        </div>
+        <h3 className="text-xl font-semibold mb-3 text-green-400">Calculate Your Investment</h3>
+        <p className="text-gray-300">Use our tool to determine how much of your income you can allocate toward ESG funds.</p>
+      </div>
+      <div className="p-6 text-center border border-gray-700 rounded-lg 
+                     hover:border-green-500/50 transition-all duration-300 
+                     bg-gray-800 hover:transform hover:scale-105">
+        <div className="bg-green-500 w-14 h-14 rounded-full flex items-center 
+                       justify-center mx-auto mb-4 shadow-lg shadow-green-500/20">
+          <span className="text-xl font-bold">3</span>
+        </div>
+        <h3 className="text-xl font-semibold mb-3 text-green-400">Simulate & Track Impact</h3>
+        <p className="text-gray-300">Make virtual investments, track your portfolio, and see the real-world impact of your choices.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Pricing Plans Section */}
-      <section className="w-full py-20 bg-gray-800">
+      <section className="w-full py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 
                          bg-gradient-to-r from-green-400 to-green-600 
@@ -57,7 +98,7 @@ const Working = () => {
             Choose Your Plan
           </h2>
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-gray-900 rounded-xl p-8 text-center border border-gray-700 
+            <div className="bg-gray-800 rounded-xl p-8 text-center border border-gray-700 
                            hover:border-green-500/50 transition-all duration-300">
               <h3 className="text-xl font-semibold mb-4 text-white">Basic</h3>
               <p className="text-3xl font-bold mb-6 text-white">Free</p>
@@ -101,7 +142,7 @@ const Working = () => {
                 Go Pro
               </button>
             </div>
-            <div className="bg-gray-900 rounded-xl p-8 text-center border border-gray-700 
+            <div className="bg-gray-800 rounded-xl p-8 text-center border border-gray-700 
                            hover:border-green-500/50 transition-all duration-300">
               <h3 className="text-xl font-semibold mb-4 text-white">Enterprise</h3>
               <p className="text-3xl font-bold mb-6 text-white">Custom</p>

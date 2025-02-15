@@ -27,6 +27,28 @@ import Signup from './components/auth/Signup'
 import ProtectedRoute from './components/auth/ProtectedRoute'
 import GreenFundSearch from './components/GreenFundSearch'
 
+// function App() {
+//   return (
+//     <Router>
+//       <div className='overflow-x-hidden'>
+//         <Routes>
+//           <Route path="/" element={<LandingPage />} />
+//           <Route path="/login" element={<Login />} />
+//           <Route path="/signup" element={<Signup />} />
+//           <Route 
+//             path="/features" 
+//             element={
+//               <ProtectedRoute>
+//                 <FeaturePage />
+//               </ProtectedRoute>
+//             } 
+//           />
+//           <Route path="/green-funds" element={<GreenFundSearch />} />
+//         </Routes>
+//       </div>
+//     </Router>
+//   )
+// }
 function App() {
   return (
     <Router>
@@ -35,19 +57,12 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route 
-            path="/features" 
-            element={
-              <ProtectedRoute>
-                <FeaturePage />
-              </ProtectedRoute>
-            } 
-          />
+          <Route path="/features" element={<FeaturePage />} />
           <Route path="/green-funds" element={<GreenFundSearch />} />
         </Routes>
       </div>
-    </Router>
-  )
+    </Router>
+  )
 }
 
 export default App

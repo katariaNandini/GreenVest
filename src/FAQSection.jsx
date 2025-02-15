@@ -3,32 +3,38 @@ import React, { useState } from "react";
 const faqData = [
   {
     id: 1,
-    question: "What are green investments?",
+    question: "What are ESG funds, and how do they work?",
     answer:
-      "Green investments focus on companies and funds that prioritize environmental sustainability, such as renewable energy and eco-friendly initiatives.",
+      "ESG funds invest in companies that meet environmental, social, and governance standards, ensuring responsible and sustainable business practices while generating financial returns.",
   },
   {
     id: 2,
-    question: "How can I check a company's sustainability score?",
+    question: "Are ESG funds as profitable as traditional investments?",
     answer:
-      "You can check sustainability scores on financial platforms, or use our GreenVest platform to analyze a company's ESG ratings.",
+      "Yes, many ESG funds have shown competitive or even higher returns than traditional investments due to strong governance, ethical practices, and resilience against economic risks.",
   },
   {
     id: 3,
-    question: "Are green investments profitable?",
+    question: "How can ESG funds benefit the environment and society?",
     answer:
-      "Yes, many green investments provide strong long-term returns while promoting sustainability and reducing environmental impact.",
+      "ESG funds support businesses that reduce carbon footprints, promote fair labor policies, and follow ethical corporate governance, contributing to a more sustainable future.",
   },
   {
     id: 4,
-    question: "What is an ESG score?",
+    question: "Are ESG investments regulated or government-supported?",
     answer:
-      "An ESG score measures a company's environmental, social, and governance impact, helping investors assess sustainability risks.",
+      "Yes, many governments encourage ESG investing through policies, tax benefits, and regulations to promote sustainability and responsible investing.",
+  },
+  {
+    id: 5,
+    question: "How can I start investing in ESG funds?",
+    answer:
+      "You can invest in ESG mutual funds, ETFs, or green bonds through financial institutions, stock markets, or investment platforms that offer ESG-focused portfolios.",
   },
 ];
 
 const FAQItem = ({ question, answer, isOpen, toggle }) => (
-  <div className="border border-gray-700 rounded-lg hover:border-green-500/50 
+  <div className="border border-gray-600 rounded-lg hover:border-green-500/50 
                   transition-all duration-300 group">
     <button
       className="w-full text-left p-4 bg-gray-900 hover:bg-gray-800 
@@ -57,7 +63,7 @@ const FAQSection = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
 
   return (
-    <section className="py-20 bg-gray-800 text-gray-100">
+    <section className="py-20 bg-gray-900 text-gray-100">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 
