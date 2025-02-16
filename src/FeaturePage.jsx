@@ -5,11 +5,12 @@ import SustainabilityScore from "./components/SustainabilityScore";
 import GreenNews from './components/GreenNews';
 import GreenMutualFund from './components/GreenMutualFund';
 import GreenFundSearch from './components/GreenFundSearch';
+import ESGEducation from './components/ESGEducation';
 import { useNavigate } from 'react-router-dom';
 
 const features = [
   // { name: "Sustainability Score System", icon: <FaLeaf />, component: <SustainabilityScore /> },
-  { name: "Portfolio Carbon Footprint Analysis", icon: <FaChartLine />, component: null },
+  { name: "ESG Investment Guide", icon: <FaLeaf />, component: <ESGEducation /> },
   { name: "Green Mutual Fund", icon: <FaGavel />, component: <GreenFundSearch /> },
   { name: "ESG Funds Explorer", icon: <FaMoneyBillWave />, component: <GreenMutualFund /> },
   { name: "Impact Calculator", icon: <FaCalculator />, component: <ImpactCalculator /> },
@@ -72,7 +73,9 @@ const FeaturePage = () => {
       {/* Content Area */}
       <div className="flex-1 p-8 overflow-y-auto">
         {selectedFeature.component ? (
-          selectedFeature.component
+          React.cloneElement(selectedFeature.component, { 
+            onFeatureSelect: setSelectedFeature 
+          })
         ) : (
           <div className="flex items-center justify-center h-full">
             <h1 className="text-4xl font-semibold">{selectedFeature.name}</h1>
