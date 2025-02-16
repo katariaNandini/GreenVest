@@ -19,17 +19,20 @@ const LandingPage = () => {
       {/* Enhanced Navbar */}
       <nav className="flex items-center justify-between sticky top-0 border-b border-gray-800 w-full p-7 
                       backdrop-blur-lg bg-gray-900/90 z-50 transition-all duration-300 shadow-lg">
-        <div className="flex items-center space-x-24">
-          <span className="text-2xl font-bold text-green-500 hover:text-green-400 
-                          transition-all duration-300 transform hover:scale-105">
-            GreenVest
-          </span>
-          <div className="flex space-x-8 items-end">
+        {/* Logo */}
+        <span className="text-2xl font-bold text-green-500 hover:text-green-400 
+                        transition-all duration-300 transform hover:scale-105">
+          GreenVest
+        </span>
+
+        {/* Navigation Links at the end */}
+        <div className="flex items-center">
+          <div className="flex items-center space-x-8 mr-8">
             <a href="#" className="hover:text-green-500 transition-all duration-300 
                                  relative after:content-[''] after:absolute after:w-0 
                                  after:h-0.5 after:bg-green-500 after:left-0 
                                  after:bottom-0 hover:after:w-full after:transition-all">
-              Dashboard
+              About Us
             </a>
             <a href="#" className="hover:text-green-500 transition-all duration-300 
                                  relative after:content-[''] after:absolute after:w-0 
@@ -41,20 +44,20 @@ const LandingPage = () => {
                                  relative after:content-[''] after:absolute after:w-0 
                                  after:h-0.5 after:bg-green-500 after:left-0 
                                  after:bottom-0 hover:after:w-full after:transition-all">
-              News
+              FAQ
             </a>
             <a href="#" className="hover:text-green-500 transition-all duration-300 
                                  relative after:content-[''] after:absolute after:w-0 
                                  after:h-0.5 after:bg-green-500 after:left-0 
                                  after:bottom-0 hover:after:w-full after:transition-all">
-              Community
+              Plan
             </a>
           </div>
+          <button className="p-2 rounded-full hover:bg-gray-700/50 transition-all 
+                            duration-300 backdrop-blur-sm">
+            <Moon className="w-5 h-5" />
+          </button>
         </div>
-        <button className="p-2 rounded-full hover:bg-gray-700/50 transition-all 
-                          duration-300 backdrop-blur-sm">
-          <Moon className="w-5 h-5" />
-        </button>
       </nav>
 
       {/* Enhanced Hero Section */}
