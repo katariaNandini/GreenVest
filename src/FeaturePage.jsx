@@ -8,13 +8,13 @@ import GreenFundSearch from './components/GreenFundSearch';
 import { useNavigate } from 'react-router-dom';
 
 const features = [
-  { name: "Sustainability Score System", icon: <FaLeaf />, component: <SustainabilityScore /> },
+  // { name: "Sustainability Score System", icon: <FaLeaf />, component: <SustainabilityScore /> },
   { name: "Portfolio Carbon Footprint Analysis", icon: <FaChartLine />, component: null },
-  { name: "Green Mutual Fund", icon: <FaMoneyBillWave />, component: <GreenMutualFund /> },
+  { name: "Green Mutual Fund", icon: <FaGavel />, component: <GreenFundSearch /> },
+  { name: "ESG Funds Explorer", icon: <FaMoneyBillWave />, component: <GreenMutualFund /> },
+  { name: "Impact Calculator", icon: <FaCalculator />, component: <ImpactCalculator /> },
   { name: "Live Green Investment News", icon: <FaNewspaper />, component: <GreenNews /> },
   { name: "Community", icon: <FaUsers />, component: null },
-  { name: "Impact Calculator", icon: <FaCalculator />, component: <ImpactCalculator /> },
-  { name: "Tax Benefits & Govt. Schemes Integration", icon: <FaGavel />, component: <GreenFundSearch /> }
 ];
 
 const FeaturePage = () => {

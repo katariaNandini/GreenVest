@@ -45,198 +45,181 @@ const ImpactCalculator = () => {
 
   const styles = {
     mainContent: {
-      marginLeft: '200px',
-      minHeight: '100vh',
-      width: 'calc(100% - 400px)',
-      backgroundColor: '#111827',
-      color: '#f3f4f6',
-      overflowY: 'auto',
-      position: 'relative',
-      padding: '40px 60px',
-      marginRight: '200px',
-      display: 'flex',
-      alignItems: 'center'
-    },
-    container: {
-      width: '100%',
+      margin: '10px auto',
+      width: '95%',
       maxWidth: '900px',
-      margin: '0 auto',
-      padding: '0'
+      minHeight: '90vh',
+      padding: '20px 16px',
+      backgroundColor: '#0f172a',
+      color: '#f8fafc',
+      borderRadius: '12px'
     },
     title: {
-      fontSize: '2.5rem',
-      color: '#10b981',
-      marginBottom: '32px',
-      display: 'flex',
-      alignItems: 'center',
-      gap: '12px'
+      fontSize: '1.8rem',
+      color: '#22c55e',
+      marginBottom: '24px',
+      textAlign: 'left',
+      fontWeight: '600'
     },
-    card: {
-      backgroundColor: '#1f2937',
-      borderRadius: '16px',
-      padding: '32px',
-      border: '1px solid #374151',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '24px'
+    calculatorContainer: {
+      backgroundColor: '#1e293b',
+      borderRadius: '12px',
+      padding: '24px',
+      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
     },
-    inputContainer: {
+    inputSection: {
+      marginBottom: '24px',
       display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
-      gap: '24px',
-      marginBottom: '24px'
+      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+      gap: '16px'
     },
-    inputGroup: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '8px'
-    },
-    label: {
-      color: '#10b981',
-      fontSize: '1.1rem',
+    inputLabel: {
+      display: 'block',
+      color: '#94a3b8',
+      marginBottom: '6px',
+      fontSize: '0.9rem',
       fontWeight: '500'
     },
     input: {
       width: '100%',
-      padding: '12px 16px',
-      backgroundColor: '#111827',
-      border: '2px solid #374151',
-      borderRadius: '8px',
-      color: '#f3f4f6',
-      fontSize: '1.1rem',
-      transition: 'all 0.2s ease',
-      ':focus': {
-        borderColor: '#10b981',
-        outline: 'none'
-      }
+      padding: '8px 12px',
+      backgroundColor: '#0f172a',
+      border: '1px solid #334155',
+      borderRadius: '6px',
+      color: '#f8fafc',
+      fontSize: '0.9rem',
+      outline: 'none',
+      transition: 'border-color 0.2s ease'
     },
     select: {
       width: '100%',
-      padding: '12px 16px',
-      backgroundColor: '#111827',
-      border: '2px solid #374151',
+      padding: '8px 12px',
+      backgroundColor: '#0f172a',
+      border: '1px solid #334155',
+      borderRadius: '6px',
+      color: '#f8fafc',
+      fontSize: '0.9rem',
+      outline: 'none',
+      cursor: 'pointer'
+    },
+    impactSection: {
+      backgroundColor: '#0f172a',
       borderRadius: '8px',
-      color: '#f3f4f6',
-      fontSize: '1.1rem'
+      padding: '20px',
+      marginTop: '24px'
+    },
+    impactTitle: {
+      color: '#22c55e',
+      fontSize: '1.2rem',
+      marginBottom: '16px',
+      fontWeight: '600'
     },
     impactGrid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      gap: '24px'
-    },
-    impactCard: {
-      backgroundColor: '#111827',
-      padding: '24px',
-      borderRadius: '12px',
-      border: '1px solid #374151',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center'
-    },
-    impactIcon: {
-      color: '#10b981',
-      fontSize: '28px',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+      gap: '16px',
       marginBottom: '16px'
     },
-    impactValue: {
-      fontSize: '2rem',
-      fontWeight: 'bold',
-      color: '#10b981',
-      marginBottom: '8px'
-    },
-    impactLabel: {
-      color: '#d1d5db',
-      fontSize: '1.1rem'
-    },
-    note: {
-      backgroundColor: '#111827',
+    impactCard: {
+      backgroundColor: '#1e293b',
       padding: '16px',
       borderRadius: '8px',
-      color: '#d1d5db',
-      fontSize: '0.9rem',
-      marginTop: 'auto'
+      textAlign: 'left'
+    },
+    impactLabel: {
+      color: '#94a3b8',
+      fontSize: '0.8rem',
+      marginBottom: '4px'
+    },
+    impactValue: {
+      color: '#f8fafc',
+      fontSize: '1.4rem',
+      fontWeight: '600'
+    },
+    note: {
+      color: '#64748b',
+      fontSize: '0.8rem',
+      marginTop: '16px',
+      padding: '12px',
+      backgroundColor: '#1e293b',
+      borderRadius: '6px',
+      lineHeight: '1.4'
     }
   };
 
   return (
     <div style={styles.mainContent}>
-      <div style={styles.container}>
-        <h1 style={styles.title}>
-          <FaChartLine />
-          ESG Impact Calculator
-        </h1>
-
-        <div style={styles.card}>
-          <div style={styles.inputContainer}>
-            <div style={styles.inputGroup}>
-              <label style={styles.label}>Investment Amount ($)</label>
-              <input
-                type="number"
-                value={investment}
-                onChange={(e) => setInvestment(e.target.value)}
-                placeholder="Enter amount"
-                style={styles.input}
-              />
-            </div>
-
-            <div style={styles.inputGroup}>
-              <label style={styles.label}>Fund Type</label>
-              <select
-                value={fundType}
-                onChange={(e) => setFundType(e.target.value)}
-                style={styles.select}
-              >
-                <option value="environmental">Environmental Fund</option>
-                <option value="social">Social Impact Fund</option>
-                <option value="governance">Governance Fund</option>
-              </select>
-            </div>
-
-            <div style={styles.inputGroup}>
-              <label style={styles.label}>Investment Duration</label>
-              <select
-                value={duration}
-                onChange={(e) => setDuration(e.target.value)}
-                style={styles.select}
-              >
-                {[1, 2, 3, 4, 5, 10, 15, 20].map(year => (
-                  <option key={year} value={year}>{year} {year === 1 ? 'year' : 'years'}</option>
-                ))}
-              </select>
-            </div>
+      <h1 style={styles.title}>Environmental Impact Calculator</h1>
+      
+      <div style={styles.calculatorContainer}>
+        <div style={styles.inputSection}>
+          <div>
+            <label style={styles.inputLabel}>Investment Amount ($)</label>
+            <input
+              type="number"
+              value={investment}
+              onChange={(e) => setInvestment(e.target.value)}
+              placeholder="Enter amount"
+              style={styles.input}
+            />
           </div>
 
+          <div>
+            <label style={styles.inputLabel}>Investment Duration (Years)</label>
+            <select
+              value={duration}
+              onChange={(e) => setDuration(e.target.value)}
+              style={styles.select}
+            >
+              {[1, 2, 3, 4, 5, 10, 15, 20].map(year => (
+                <option key={year} value={year}>
+                  {year} {year === 1 ? 'year' : 'years'}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label style={styles.inputLabel}>Investment Sector</label>
+            <select
+              value={fundType}
+              onChange={(e) => setFundType(e.target.value)}
+              style={styles.select}
+            >
+              <option value="environmental">Environmental Fund</option>
+              <option value="social">Social Impact Fund</option>
+              <option value="governance">Governance Fund</option>
+            </select>
+          </div>
+        </div>
+
+        <div style={styles.impactSection}>
+          <h2 style={styles.impactTitle}>Your Environmental Impact</h2>
           <div style={styles.impactGrid}>
             <div style={styles.impactCard}>
-              <FaLeaf style={styles.impactIcon} />
+              <div style={styles.impactLabel}>CO2 Reduction</div>
               <div style={styles.impactValue}>{impact.co2} tons</div>
-              <div style={styles.impactLabel}>CO₂ Emissions Reduced</div>
             </div>
-
+            
             <div style={styles.impactCard}>
-              <FaWater style={styles.impactIcon} />
+              <div style={styles.impactLabel}>Water Saved</div>
               <div style={styles.impactValue}>{impact.water.toLocaleString()} L</div>
-              <div style={styles.impactLabel}>Water Conserved</div>
             </div>
 
             <div style={styles.impactCard}>
-              <FaSolarPanel style={styles.impactIcon} />
-              <div style={styles.impactValue}>{impact.energy.toLocaleString()} kWh</div>
               <div style={styles.impactLabel}>Clean Energy Generated</div>
+              <div style={styles.impactValue}>{impact.energy.toLocaleString()} kWh</div>
             </div>
 
             <div style={styles.impactCard}>
-              <FaUsers style={styles.impactIcon} />
-              <div style={styles.impactValue}>{impact.social} people</div>
               <div style={styles.impactLabel}>Lives Impacted</div>
+              <div style={styles.impactValue}>{impact.social} people</div>
             </div>
           </div>
+        </div>
 
-          <div style={styles.note}>
-            <p>Note: These calculations are estimates based on industry averages and historical data. 
-               Actual environmental and social impact may vary based on specific fund performance and implementation.</p>
-          </div>
+        <div style={styles.note}>
+          Note: These calculations are estimates based on industry averages. Actual environmental impact may vary based on specific projects and implementation.
         </div>
       </div>
     </div>

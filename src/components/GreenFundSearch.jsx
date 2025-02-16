@@ -31,6 +31,10 @@ const GreenFundSearch = () => {
     dividend: true
   });
 
+  // New states to improve interactivity
+  const [hoveredCard, setHoveredCard] = useState(null);
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -139,20 +143,19 @@ const GreenFundSearch = () => {
 
   const styles = {
     mainContent: {
-      marginLeft: '200px',
+      margin: '20px auto',
       minHeight: '100vh',
-      width: 'calc(100% - 400px)',
+      width: '100%',
+      maxWidth: '1400px',
       backgroundColor: '#111827',
       color: '#f3f4f6',
       overflowY: 'auto',
       position: 'relative',
-      padding: '40px 60px',
-      marginRight: '200px'
+      padding: '40px 20px'
     },
     container: {
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '0'
+      width: '100%',
+      margin: '0 auto'
     },
     header: {
       marginBottom: '20px'
@@ -184,6 +187,10 @@ const GreenFundSearch = () => {
       color: '#f3f4f6',
       transition: 'all 0.2s ease'
     },
+    searchInputFocus: {
+      borderColor: '#10b981',
+      boxShadow: '0 0 8px rgba(16, 185, 129, 0.5)'
+    },
     filterContainer: {
       backgroundColor: '#1f2937',
       padding: '24px',
@@ -212,7 +219,8 @@ const GreenFundSearch = () => {
       border: '1px solid #374151',
       borderRadius: '8px',
       cursor: 'pointer',
-      color: '#f3f4f6'
+      color: '#f3f4f6',
+      transition: 'background-color 0.2s ease'
     },
     checkbox: {
       accentColor: '#10b981',
@@ -220,10 +228,9 @@ const GreenFundSearch = () => {
     },
     fundsContainer: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
-      gap: '1px',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+      gap: '20px',
       backgroundColor: '#1f2937',
-      border: '1px solid #1f2937',
       borderRadius: '12px',
       overflow: 'hidden'
     },
@@ -235,10 +242,16 @@ const GreenFundSearch = () => {
       display: 'flex',
       flexDirection: 'column',
       gap: '20px',
-      transition: 'background-color 0.2s ease',
-      '&:hover': {
-        backgroundColor: '#1f2937'
-      }
+      transition: 'transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease',
+      border: '2px solid #374151',
+      borderRadius: '12px'
+    },
+    fundCardHover: {
+      backgroundColor: '#1f2937',
+      transform: 'translateY(-4px)',
+      boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+      border: '2px solid #374151',
+      borderRadius: '12px'
     },
     fundTitle: {
       fontSize: '1rem',
@@ -318,7 +331,12 @@ const GreenFundSearch = () => {
             placeholder="Search funds..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={styles.searchInput}
+            onFocus={() => setIsSearchFocused(true)}
+            onBlur={() => setIsSearchFocused(false)}
+            style={{
+              ...styles.searchInput,
+              ...(isSearchFocused ? styles.searchInputFocus : {})
+            }}
           />
         </div>
 
@@ -439,7 +457,12 @@ const GreenFundSearch = () => {
               filteredFunds.map((fund) => (
                 <div 
                   key={fund.schemeCode} 
-                  style={styles.fundCard}
+                  style={{
+                    ...styles.fundCard,
+                    ...(hoveredCard === fund.schemeCode ? styles.fundCardHover : {})
+                  }}
+                  onMouseEnter={() => setHoveredCard(fund.schemeCode)}
+                  onMouseLeave={() => setHoveredCard(null)}
                   onClick={() => handleFundClick(fund)}
                 >
                   <h3 style={styles.fundTitle}>
