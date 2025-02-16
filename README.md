@@ -6,9 +6,9 @@
 
 ### **Team Members**
 - **Muskan Gupta** - Team Leader
-- **Khushi Panwar** - Researcher
+- **Khushi Panwar** - ResearcherBackend Developer
 - **Nandini Kataria** - Frontend Developer
-- **Shreya Agarwal** - Backend Developer
+- **Shreya Agarwal** - Researcher
 
 ## **Problem Statement**
 
