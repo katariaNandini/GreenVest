@@ -5,9 +5,9 @@
 **IIITD’s Fintech Hackathon**
 
 ### **Team Members**
-- **Muskan Gupta** - Team Leader
-- **Khushi Panwar** - ResearcherBackend Developer
-- **Nandini Kataria** - Frontend Developer
+- **Muskan Gupta** - Researcher
+- **Khushi Panwar** - Frontend Developer
+- **Nandini Kataria** - Backend Developer
 - **Shreya Agarwal** - Researcher
 
 ## **Problem Statement**
