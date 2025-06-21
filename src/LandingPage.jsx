@@ -2,7 +2,7 @@ import React from 'react';
 import { Moon, Sun, TrendingUp, Users, BarChart3, Globe, Upload } from 'lucide-react';
 import FeaturesSection from './Feature';
 import FAQSection from './FAQSection';
-import Working from './working';
+import Working from './Working';
 import Footer from './Footer';
 import AboutUs from './About';
 import { Link, useNavigate } from 'react-router-dom';
