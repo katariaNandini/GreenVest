@@ -1,4 +1,4 @@
-# Solution Wizard
+<!--# Solution Wizard
 
 ## **Team ID:** SW031
 
@@ -17,7 +17,7 @@ How can fintech innovation promote sustainable and responsible financial practic
 > **Challenges:** Greenwashing and limited awareness about eco-friendly investment options prevent investors from making informed decisions. Without a shift towards sustainable finance, the financial industry will continue to be a major contributor to global environmental challenges.
 
 ## **Solution Overview**
-Solution Wizard is a fintech platform that educates and assists investors in ESG investing by providing insights, simulations, and real-time tracking of sustainable investments.
+Solution Wizard is a fintech platform that educates and assists investors in ESG investing by providing insights, simulations, and real-time tracking of sustainable investments.-->
 
 ### **Key Features**
 1. **ESG Awareness & Education** – Educates users on ESG funds, their impact, sustainability benefits, and ethical investing.
@@ -56,12 +56,12 @@ Solution Wizard is a fintech platform that educates and assists investors in ESG
 2. **Freemium Subscription Model** – AI-powered ESG fund recommendations, impact tracking, and portfolio insights.
 3. **Referral & Rewards Program** – Users earn points for learning & investing.
 
-## **Prototype/Demo**
+<!--## **Prototype/Demo**
 🎥 [Watch the Prototype Video](https://drive.google.com/file/d/1UaxHNHrU3VI73BBxlXTujwOeh4fQBedm/view?usp=drive_link)
 
 🚀 **[GitHub Repository](https://github.com/katariaNandini/Solution-Wizard)**
-
+-->
 ---
-Thank you for exploring our project! 🌍💡
+Thank you for exploring the  project! 🌍💡
 
 
